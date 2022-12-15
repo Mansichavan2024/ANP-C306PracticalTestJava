@@ -1,10 +1,13 @@
 package com.mymart.service;
-
+import com.mymart.dao.*;
 public class ProductService {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	private ProductDAO productDAO;
+	
+	public ProductService(ProductDAO productDAO) {
+	        this.productDAO = productDAO;
+	    }
+	
+	public void addProductService(ProductDAO product){
+        productDAO.addProduct(product);
+    }
 }
